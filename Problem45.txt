@@ -1,0 +1,20 @@
+triangulars = []
+pentagonals = []
+hexagonals = []
+
+r = 40755
+m = 100000
+
+for n in range(285,m):
+  triangulars.append(n*(n+1)/2)
+
+for n in range(165,m):
+  pentagonals.append(n*((3*n) - 1 )*0.5)
+
+for n in range(143,m):
+  hexagonals.append(n*((2*n) - 1))
+
+for number in triangulars:
+  if number in pentagonals:
+    if number in hexagonals:
+      print("True for " + str(number))

@@ -1,0 +1,18 @@
+number_one = 1
+number_two = 2
+i = 0
+sum = 0
+
+while (number_one < 4000000) and (number_two < 4000000):
+	i = i + 1
+	if i%2 == 0:
+		number_two = number_one + number_two
+		print(number_two)
+		if (number_two%2 ==0):
+			sum = sum + number_two
+	else:
+		number_one = number_one + number_two
+		print(number_one)
+		if (number_one%2 ==0):
+			sum = sum + number_one
+print(sum)

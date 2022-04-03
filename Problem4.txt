@@ -1,0 +1,20 @@
+
+i=100
+largest_palindrome = 0
+
+while (i < 1000):
+	j=100
+
+	while (j < 1000):
+
+		k = j * i
+		reverse = str(k) [::-1]
+		if str(k) == reverse:
+			if (k > largest_palindrome):
+				largest_palindrome = k
+			print(str(largest_palindrome) + "   " + str(i) + "   " + str(j))
+
+		j = j + 1
+	i = i + 1
+
+		

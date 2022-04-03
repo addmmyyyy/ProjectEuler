@@ -1,0 +1,22 @@
+import math
+answer_found = False
+i = 1
+
+
+while (answer_found == False):
+	sum = ((i+1)*i)/2
+	
+
+	factors = 0
+	j=1
+	for number in range(int(math.sqrt(sum))):
+		if sum%j == 0:
+			factors = factors + 2
+		j=j+1
+
+	print(str(sum) + "  " + str(factors))
+			
+	if (factors > 500):
+		print(sum)
+		answer_found = True
+	i = i + 1

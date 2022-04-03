@@ -1,0 +1,10 @@
+list = []
+
+input = int(input("What input? "))
+
+for a in range(2,input+1):
+  for b in range(2,input+1):
+    if a**b not in list:
+      list.append(a**b)
+
+print(len(list))

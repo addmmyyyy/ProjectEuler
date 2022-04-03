@@ -1,0 +1,10 @@
+for m in range(1,1000):
+	for n in range(1,1000):
+		a=(m*m) - (n*n)
+		b=(2*m*n)
+		c=(m*m) + (n*n)
+		if (a+b+c == 1000) and m > n > 0:
+			print(a)
+			print(b)
+			print(c)
+			raise SystemExit(0)

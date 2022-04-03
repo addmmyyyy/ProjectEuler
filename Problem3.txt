@@ -1,0 +1,16 @@
+number = int(input("What is the number?"))
+i = 1
+greatest_factor = 0
+
+while (i<775146):
+	if number%i == 0:
+		j = 3
+		while (j < i):
+			if i%j == 0:
+				break
+			j=j+1			
+		if j == i:
+			greatest_factor = i
+		
+	i=i+2
+print(greatest_factor)

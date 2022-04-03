@@ -1,0 +1,11 @@
+input = int(input("What is your input? "))
+factorial = 1
+fact_digital_sum = 0
+
+for number in range(1,(input+1)):
+  factorial = factorial * number
+
+for number in str(factorial):
+  fact_digital_sum += int(number)
+
+print(fact_digital_sum)

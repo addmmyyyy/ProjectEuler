@@ -1,0 +1,12 @@
+import math
+pentagonals = []
+floor = int(input("what floor"))
+input = int(input("what input"))
+for x in range(floor,input):
+  pentagonals.append(int(0.5*x*(3*x-1)))
+print(pentagonals)
+
+for a in pentagonals:
+  for b in pentagonals:
+    if (a+b) in pentagonals and abs(a-b) in pentagonals:
+      print(str(a) + " , " + str(b))

@@ -1,0 +1,7 @@
+For all solutions in a NxN grid:
+
+There are 2N movements
+
+There are N ups and N downs
+
+Use binomial coefficient for (40  20)

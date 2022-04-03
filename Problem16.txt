@@ -1,0 +1,6 @@
+two_to_thousand = 2 ** 1000
+sum = 0
+
+for number in str(two_to_thousand):
+	sum = sum + int(number)
+print(sum)

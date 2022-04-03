@@ -1,0 +1,47 @@
+import math
+
+number_of_sundays = 0
+
+for number in range(1901,2000):
+  year = number
+  #anchor_variable = math.floor(year/100) % 4
+  century_anchor = 3
+
+  last_digits = int(str(year)[2:])
+  a = math.floor(last_digits/12)
+  b = last_digits%12
+  c = math.floor(b/4)
+  d = a + b + c
+
+  year_anchor = (century_anchor + d)%7
+
+  if year_anchor == 0:
+    number_of_sundays += 1
+    if year%4==0:
+      number_of_sundays += 1
+
+  if year_anchor == 1:
+    number_of_sundays += 1
+
+  if year_anchor == 2:
+    number_of_sundays += 2
+    if year%4==0:
+      number_of_sundays -= 1
+
+  if year_anchor == 3:
+    number_of_sundays += 2
+    if year%4==0:
+      number_of_sundays += 1
+
+  if year_anchor == 4:
+    number_of_sundays += 2
+
+  if year_anchor == 5:
+    number_of_sundays += 1
+
+  if year_anchor == 6:
+    number_of_sundays += 3
+    if year%4==0:
+      number_of_sundays -= 1
+
+print(number_of_sundays)
