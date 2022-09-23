@@ -1,0 +1,22 @@
+from math import floor
+
+def nextSet(set):
+  length = len(set)
+  
+  if length == 1:
+    b = set[0]
+  else:
+    b = set[floor(length/2)]
+
+  newSet = [b]
+
+  for num in set:
+    newSet.append(num+b)
+
+  return newSet
+  
+set = [11, 18, 19, 20, 22, 25]
+
+set = nextSet(set)
+print(set)
+  
